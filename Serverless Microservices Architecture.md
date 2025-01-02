@@ -37,6 +37,7 @@ Problem Statement: Modern applications need APIs that can handle unpredictable w
 Architecture: The solution uses API Gateway as the HTTPS entry point, receiving client requests and routing them to Lambda functions. Each Lambda function executes specific business logic for CRUD operations, with permissions managed through IAM roles. These functions interact with DynamoDB tables for data persistence, providing automatic scaling and consistent performance. CloudWatch logs capture metrics and errors across all components. The architecture follows a RESTful design pattern where each API endpoint maps to specific DynamoDB operations through Lambda functions. This serverless approach eliminates the need to manage servers while ensuring the system scales automatically with demand.
 
 
+![image](https://github.com/user-attachments/assets/e8f61589-8f30-485e-b44d-1d87fa1f9725)
 
 <p align="center">
   <img src="[https://github.com/user-attachments/assets/5fff6335-a18e-438e-af02-dc0a0b19659c](https://github.com/user-attachments/assets/b8f47642-3754-4f28-b106-0087acfb1319)" alt="Figure 1: AWS Serverless API Architecture">
