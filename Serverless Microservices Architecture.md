@@ -184,7 +184,7 @@ Create Operation:
 ```
 
 ![image2](https://github.com/user-attachments/assets/c15edcb2-ef1f-4d8b-8424-3a1f024d5a22)
-Create operation response.
+**Create operation response.**
 
 Read Operation:
 ```json
