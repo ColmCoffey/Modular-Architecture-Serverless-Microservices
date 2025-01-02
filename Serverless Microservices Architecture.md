@@ -37,7 +37,7 @@ Problem Statement: Modern applications need APIs that can handle unpredictable w
 Architecture: The solution uses API Gateway as the HTTPS entry point, receiving client requests and routing them to Lambda functions. Each Lambda function executes specific business logic for CRUD operations, with permissions managed through IAM roles. These functions interact with DynamoDB tables for data persistence, providing automatic scaling and consistent performance. CloudWatch logs capture metrics and errors across all components. The architecture follows a RESTful design pattern where each API endpoint maps to specific DynamoDB operations through Lambda functions. This serverless approach eliminates the need to manage servers while ensuring the system scales automatically with demand.
 
 ![aws_serverless_api_architecture](https://github.com/user-attachments/assets/5fff6335-a18e-438e-af02-dc0a0b19659c)
-
+![Figure 1: AWS Serverless API Architecture](https://github.com/user-attachments/assets/5fff6335-a18e-438e-af02-dc0a0b19659c)
 
 ## Step-by-Step Guide
 
@@ -84,7 +84,7 @@ Steps:
 Save the policy as DynamoDB-CloudWatch-Policy.
 
 ![image5](https://github.com/user-attachments/assets/f500ca1e-d625-42f8-824e-0e9bc947eb7e)
-IAM Role creation and policy attachment.
+![Figure 2: IAM Role Creation and Policy Attachment](https://github.com/user-attachments/assets/f500ca1e-d625-42f8-824e-0e9bc947eb7e)
 
 ### 2. Setting Up API Gateway
 Why This Step? API Gateway serves as the entry point for HTTP requests and integrates with Lambda for processing logic.
@@ -103,7 +103,8 @@ Steps:
    - Actions → Deploy API → Stage: prod.
    - Copy the Invoke URL.
 
-Screenshot 2: Configuring API Gateway.
+![image2](https://github.com/user-attachments/assets/99b23843-44cb-436d-b361-07e4ef49a252)
+![Figure 3: Configuring API Gateway](https://github.com/user-attachments/assets/c15edcb2-ef1f-4d8b-8424-3a1f024d5a22)
 
 ### 3. Creating Lambda Function
 Why This Step? The Lambda function processes incoming HTTP requests and performs CRUD operations on DynamoDB.
@@ -147,8 +148,7 @@ Click Deploy.
 
 
 ![image10](https://github.com/user-attachments/assets/f6aa7186-0a1a-4bc9-87e2-d06ebac9dec8)
-
-Lambda function creation and deployment.
+![Figure 4: Lambda Function Creation and Deployment](https://github.com/user-attachments/assets/f6aa7186-0a1a-4bc9-87e2-d06ebac9dec8)
 
 ### 4. Creating DynamoDB Table
 Why This Step? DynamoDB stores data used in CRUD operations.
@@ -160,8 +160,7 @@ Steps:
 4. Click Create Table.
 
 ![image5](https://github.com/user-attachments/assets/333b823c-57b6-44e0-b5fd-b722eb911a67)
-
-DynamoDB table configuration.
+![Figure 5: DynamoDB Table Configuration](https://github.com/user-attachments/assets/333b823c-57b6-44e0-b5fd-b722eb911a67)
 
 ### 5. Testing API with Postman
 Why This Step? Postman validates CRUD operations and helps debug API requests.
@@ -184,7 +183,7 @@ Create Operation:
 ```
 
 ![image2](https://github.com/user-attachments/assets/c15edcb2-ef1f-4d8b-8424-3a1f024d5a22)
-**Create operation response.**
+![Figure 6: Create Operation Response](https://github.com/user-attachments/assets/c15edcb2-ef1f-4d8b-8424-3a1f024d5a22)
 
 Read Operation:
 ```json
@@ -196,8 +195,8 @@ Read Operation:
 ```
 
 ![image9](https://github.com/user-attachments/assets/f1fea988-f96b-4f62-bfbc-bc523fd42004)
+![Figure 7: Read Operation Response](https://github.com/user-attachments/assets/f1fea988-f96b-4f62-bfbc-bc523fd42004)
 
-Read operation response.
 
 Update Operation:
 ```json
@@ -213,6 +212,7 @@ Update Operation:
 }
 ```
 ![image1](https://github.com/user-attachments/assets/38c004ec-8ae8-4943-8178-1da6831c7fb0)
+![Figure 8: Update Operation Response](https://github.com/user-attachments/assets/38c004ec-8ae8-4943-8178-1da6831c7fb0)
 
 Update operation response.
 
@@ -225,7 +225,8 @@ Delete Operation:
 }
 ```
 
-Screenshot 8: Delete operation response.
+![image3](https://github.com/user-attachments/assets/333ea9d0-d921-4459-8170-133fb4fd94ae)
+![Figure 9: Delete Operation Response](https://github.com/user-attachments/assets/38c004ec-8ae8-4943-8178-1da6831c7fb0)
 
 ### 6. Cleanup Resources
 Why This Step? To avoid unnecessary costs, remove AWS resources when testing is complete.
@@ -244,7 +245,6 @@ Steps:
 2. Select the Lambda log group.
 3. Review logs for errors or debugging info.
 
-Screenshot 9: CloudWatch logs for Lambda debugging.
 
 ## Overcoming Challenges
 
