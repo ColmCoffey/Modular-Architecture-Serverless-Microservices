@@ -1,5 +1,7 @@
 # Serverless Microservices Architecture
 
+![image](https://github.com/user-attachments/assets/78f63d31-7f45-4676-9335-a93d755fcb8e)
+
 ## Summary
 Modern applications demand scalability, flexibility, and cost-efficiency. Serverless microservices architecture meets these needs by enabling modular, independently deployable services. This article introduces a hands-on lab for building a serverless API using AWS services.
 
